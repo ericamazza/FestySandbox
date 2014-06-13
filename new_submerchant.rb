@@ -23,18 +23,18 @@ result = Braintree::MerchantAccount.create(
   },
   :funding => {
     :destination => Braintree::MerchantAccount::FundingDestination::Bank,
-    :email => "funding@blueladders.com",
+    :email => "funding@fanfueled.com",
     :mobile_phone => "5555555555",
     :account_number => "1123581321",
     :routing_number => "071101307"
   },
   :tos_accepted => true,
   :master_merchant_account_id => "2mmr46y8qbhcp7rt",
-  :id => "fanfueled"
+  :id => "fanfueled1"
 )
 
 if result.success?
-  puts result.merchant.id
+  puts "success!"
 else
   p result.errors
 end
